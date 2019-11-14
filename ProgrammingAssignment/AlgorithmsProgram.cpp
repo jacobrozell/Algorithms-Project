@@ -4,7 +4,6 @@
 // * CLASS: COMP-3270                               * \\
 // * ASSIGNMENT: Programming Project 1              * \\
 // ************************************************** \\
-
 // NECESSARY IMPORTS
 #include <iostream>  // std::cout
 #include <fstream>   // ios::in, ios::out
@@ -254,10 +253,10 @@ int main() {
 // FIRST ALGORITHM - PROVIDED BY INSTRUCTOR IN PSEUDOCODE
 int algorithm1(int X[], int length) {
 	int maxSoFar = 0;
-	for(int L = 0; L < length - 1; L++) {
+	for(int L = 0; L <= length - 1; L++) {
 		for(int U = L; U <= length - 1; U++) {
 			int sum = 0;
-			for(int I = L; I < U; I++) {
+			for(int I = L; I <= U; I++) {
 				sum += X[I]; // Sum now contains the sum of X[L..U]
 			}
 			maxSoFar = max(maxSoFar, sum);
@@ -269,9 +268,9 @@ int algorithm1(int X[], int length) {
 // SECOND ALGORITHM - PROVIDED BY INSTRUCTOR IN PSEUDOCODE
 int algorithm2(int X[], int length) {
 	int maxSoFar = 0;
-	for(int L = 0; L < length - 1; L++) {
+	for(int L = 0; L <= length - 1; L++) {
 		int sum = 0;
-		for(int U = L; U < length - 1; U++) {
+		for(int U = L; U <= length - 1; U++) {
 			sum += X[U]; // Sum now contains the sum of X[L..U]
 			maxSoFar = max(maxSoFar, sum);
 		}
